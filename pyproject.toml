@@ -5,10 +5,12 @@ version = "0.1"
 url = "https://github.com/18801089096/fund"
 license = "MIT"
 author = "LanZz"
+author_email = "test@example.com"  # 补上了这个
+description = "A fund monitor app" # 补上了这个
 
 [tool.briefcase.app.fundapp]
 formal_name = "LanFund"
-description = "My Fund App"
+description = "A fund monitor app"
 sources = ["src/fundapp"]
 requires = [
     "flask",
@@ -19,6 +21,7 @@ requires = [
     "flask-login",
     "werkzeug"
 ]
+icon = "src/fundapp/static/1" # 尝试使用你的图标（可选，如果报错可以删掉这行）
 
 [tool.briefcase.app.fundapp.macOS]
 requires = ["std-nslog"]
