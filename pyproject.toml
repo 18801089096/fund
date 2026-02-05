@@ -13,15 +13,15 @@ formal_name = "LanFund"
 description = "A fund monitor app"
 sources = ["src/fundapp"]
 requires = [
-    "flask",
+    "flask>=2.0",
     "requests",
     "tabulate",
     "loguru",
     "python-dotenv",
-    "flask-login",
-    "werkzeug"
+    "flask-login"
 ]
-icon = "src/fundapp/static/1" # 尝试使用你的图标（可选，如果报错可以删掉这行）
+
+
 
 [tool.briefcase.app.fundapp.macOS]
 requires = ["std-nslog"]
