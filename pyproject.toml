@@ -1,0 +1,27 @@
+[tool.briefcase]
+project_name = "LanFund"
+bundle = "com.lanfund"
+version = "0.1"
+url = "https://github.com/18801089096/fund"
+license = "MIT"
+author = "LanZz"
+
+[tool.briefcase.app.fundapp]
+formal_name = "LanFund"
+description = "My Fund App"
+sources = ["src/fundapp"]
+requires = [
+    "flask",
+    "requests",
+    "tabulate",
+    "loguru",
+    "python-dotenv",
+    "flask-login",
+    "werkzeug"
+]
+
+[tool.briefcase.app.fundapp.macOS]
+requires = ["std-nslog"]
+
+[tool.briefcase.app.fundapp.iOS]
+requires = ["std-nslog"]

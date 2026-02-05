@@ -3,7 +3,13 @@
 import json
 import sqlite3
 
-import bcrypt
+# 假装我是 bcrypt，防止手机报错
+class MockBcrypt:
+    def gensalt(self, *args): return b'salt'
+    def hashpw(self, p, s): return p
+    def checkpw(self, p, h): return p == h
+bcrypt = MockBcrypt()
+
 from loguru import logger
 
 

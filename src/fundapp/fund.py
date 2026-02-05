@@ -11,7 +11,7 @@ import time
 
 import requests
 import urllib3
-from curl_cffi import requests as curl_requests
+import requests as curl_requests
 from dotenv import load_dotenv
 from loguru import logger
 from tabulate import tabulate
@@ -81,7 +81,7 @@ class LanFund:
         self.db = db  # 数据库实例，从外部传入
 
         self.session = requests.Session()
-        self.baidu_session = curl_requests.Session(impersonate="chrome")
+        self.baidu_session = curl_requests.Session()
         self.baidu_session.headers = {
             "accept": "application/vnd.finance-web.v1+json",
             "accept-language": "zh-CN,zh;q=0.9",
